@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'my_books', to: 'users#index'
+
+  get 'users/show'
+
   resources :books
   root to: 'home#index'
 

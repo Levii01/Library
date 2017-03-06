@@ -1,23 +1,24 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Name:</strong>
-  <%= @book.title %>
-</p>
+<div class="jumbotron">
+  <p>
+    <strong>Name:</strong>
+    <%= @book.title %>
+  </p>
 
-<p>
-  <strong>Grade:</strong>
-  <%= @book.grade %>
-</p>
+  <p>
+    <strong>Grade:</strong>
+    <%= @book.grade %>
+  </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+  <p>
+    <strong>Author:</strong>
+    <%= @book.author %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @book.description %>
+  </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+  <%= link_to 'Edit', edit_book_path(@book), class: "btn btn-default" %>
+  <%= link_to 'Back', books_path, class: "btn btn-default" %>
+</div>
