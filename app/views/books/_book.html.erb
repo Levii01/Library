@@ -1,0 +1,11 @@
+
+<% @books.each_with_index do |book, id| %>
+  <tr>
+    <td><%= id + 1 %></td>
+    <td><%= link_to book.name, book %></td>
+    <td><%= book.author %></td>
+    <td><%= book.grade %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>

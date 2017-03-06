@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Books</h1>
+Right in library we have <%= pluralize(@books.count, "book") %>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Grade</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render 'book' %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book', new_book_path %>
