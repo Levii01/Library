@@ -18,4 +18,8 @@ class BorrowBooksController < ApplicationController
       redirect_to my_books_path(params[:id]), notice: "You don't have this book"
     end
   end
+
+  def history
+    @borrows = BorrowBook.all
+  end
 end

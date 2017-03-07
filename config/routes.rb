@@ -6,9 +6,9 @@ Rails.application.routes.draw  do
     end
   end
 
-  get 'my_books', to: 'users#index'
-
   resources :books
+  get 'history', to: 'borrow_books#history'
+  get 'my_books', to: 'users#index'
   root to: 'home#index'
 
   devise_for :users
