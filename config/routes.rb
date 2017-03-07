@@ -11,5 +11,5 @@ Rails.application.routes.draw  do
   get 'my_books', to: 'users#index'
   root to: 'home#index'
 
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 end
