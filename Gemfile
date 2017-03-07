@@ -38,16 +38,16 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'factory_girl_rails', require: false
+gem 'faker', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rails-controller-testing'
-  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'pry-rails'
-  gem 'faker', require: false
 end
 
 group :development do
