@@ -24,11 +24,9 @@
 
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li><%= link_to "Login as #{current_user.name}"%></li>
-          <li>
-            <% if current_user.image_url %>
-              <%= image_tag current_user.image_url, class: "img-circle", width: 24 %>
-            <% end %>
+          <li class="logable">
+            Login as <%= current_user.name %>
+            <%= image_tag current_user.image_url, class: "img-avatar" if current_user.image_url %>
           </li>
           <li><%= link_to 'Edit', edit_user_registration_path %></li>
           <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
