@@ -1,6 +1,9 @@
 Rails.application.routes.draw  do
   resources :borrow_books, path: 'book', as: 'book', only: [] do
-    get 'borrow_new', on: :member
+    member do
+      get 'borrow_new'
+      get 'give_back'
+    end
   end
 
   get 'my_books', to: 'users#index'
