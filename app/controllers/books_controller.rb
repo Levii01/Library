@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = set_book(params[:id])
+    @book = set_book
   end
 
   def new
@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = set_book(params[:id])
+    @book = set_book
   end
 
   def create
@@ -32,7 +32,7 @@ class BooksController < ApplicationController
   end
 
   def update
-    @book = set_book(params[:id])
+    @book = set_book
 
     respond_to do |format|
       if @book.update(book_params)
@@ -46,7 +46,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = set_book(params[:id])
+    @book = set_book
 
     @book.destroy
     respond_to do |format|
@@ -56,9 +56,8 @@ class BooksController < ApplicationController
   end
 
   private
-    def set_book(book_id)
-      # @book = Book.find(params[:id])
-      Book.find(book_id)
+    def set_book
+      Book.find(params[:id])
     end
 
     def book_params
