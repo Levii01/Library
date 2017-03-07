@@ -16,7 +16,10 @@
       <ul class="nav navbar-nav">
         <li><%= link_to 'Start', root_path %></li>
         <li><%= link_to 'Books', books_path %></li>
+        <% if current_user %>
         <li><%= link_to 'My books', my_books_path %></li>
+        <% end %>
+        <li><%= link_to 'History', history_path %></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">

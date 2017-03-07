@@ -1,4 +1,6 @@
 class BorrowBooksController < ApplicationController
+  before_action :authenticate_user!
+
   def borrow_new
     book = Book.find(params[:id])
     if BorrowBook.exists?(user: current_user, book: book, give_back: false)
