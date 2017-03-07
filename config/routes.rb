@@ -1,4 +1,11 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw  do
+  resources :borrow_books, path: 'book', as: 'book', only: [] do
+    member do
+      get 'borrow_new'
+      get 'give_back'
+    end
+  end
+
   get 'my_books', to: 'users#index'
 
   get 'users/show'
@@ -7,5 +14,4 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,8 +1,7 @@
-
-
-
-
 class Book < ApplicationRecord
-  validates :name, uniqueness: true, presence:true
+  has_many :users, through: :borrow_books
+  has_many :borrow_books
+
+  validates :title, uniqueness: true, presence:true
   validates :author, presence:true
 end

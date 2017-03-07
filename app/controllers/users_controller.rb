@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user = current_user
+    @books = current_user.books
   end
 
   def show

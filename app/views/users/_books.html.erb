@@ -1,0 +1,7 @@
+<tr>
+  <td><%= id + 1 %></td>
+  <td><%= link_to book.title, book %></td>
+  <td><%= book.author %></td>
+  <td><%= book.grade %></td>
+  <td><%= link_to 'Give back', give_back_book_path(book.id), class: 'btn btn-default'  %></td>
+</tr>
