@@ -20,6 +20,6 @@ class BorrowBooksController < ApplicationController
   end
 
   def history
-    @borrows = BorrowBook.all
+    @borrows = BorrowBook.all.reverse
   end
 end

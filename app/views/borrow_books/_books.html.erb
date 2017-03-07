@@ -1,0 +1,7 @@
+<tr>
+  <td><%= id + 1 %></td>
+  <td><%= borrow.book.title %></td>
+  <td><%= borrow.user.email %></td>
+  <td><%= shortest_timme(borrow.created_at) %></td>
+  <td><%= shortest_timme(borrow.updated_at)  if given_back?(borrow) %></td>
+</tr>
