@@ -1,5 +1,5 @@
 <h1>Books list</h1>
-Right in library we have <%= pluralize(@books.count, 'book') %>
+<h4> Right now we have <%= pluralize(@books.count, 'book') %> in library </h4>
 
 <table class='table table-condensed'>
   <thead>
@@ -13,10 +13,11 @@ Right in library we have <%= pluralize(@books.count, 'book') %>
     </tr>
   </thead>
   <tbody>
-    <%= render 'book' %>
+    <% @books.each_with_index do |book, id| %>
+      <%= render partial: 'books', locals: { book:book, id: id } %>
+    <% end %>
   </tbody>
 </table>
 
 <br>
-
 <%= link_to 'New Book', new_book_path, class: 'btn btn-default' %>
