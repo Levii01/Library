@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe BorrowBookController, type: :controller do
+RSpec.describe BorrowBooksController, type: :controller do
 
   describe "GET #rent" do
     it "returns http success" do
