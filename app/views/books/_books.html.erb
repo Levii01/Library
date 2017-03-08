@@ -3,7 +3,10 @@
   <td><%= link_to book.title, book %></td>
   <td><%= book.author %></td>
   <td><%= book.grade %></td>
-  <td><%= link_to 'Borrow', borrow_new_book_path(book.id), class: 'btn btn-default'  %></td>
+  <td><%= link_to borrow_new_book_path(book.id), title: 'borrow', class: 'btn btn-default'  do%>
+        <%= fa_icon 'book' %>
+      <% end %>
+  </td>
   <td><%= link_to edit_book_path(book), title: 'edit', class: 'btn btn-default' do %>
         <%= fa_icon 'edit' %>
       <% end %>
