@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :borrow_book do
+  factory :user_book do
     user nil
     book nil
   end
