@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
-  has_many :users, through: :borrow_books
-  has_many :borrow_books, dependent: :destroy
+  has_many :users, through: :user_books
+  has_many :user_books, dependent: :destroy
 
   validates :title, uniqueness: true, presence:true
   validates :author, presence:true

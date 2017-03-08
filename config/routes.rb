@@ -1,5 +1,5 @@
 Rails.application.routes.draw  do
-  resources :borrow_books, path: 'book', as: 'book', only: [] do
+  resources :user_books, path: 'book', as: 'book', only: [] do
     member do
       get 'borrow_new'
       get 'give_back'
@@ -7,7 +7,7 @@ Rails.application.routes.draw  do
   end
 
   resources :books
-  get 'history', to: 'borrow_books#history'
+  get 'history', to: 'user_books#history'
   get 'my_books', to: 'users#index'
   root to: 'home#index'
 
